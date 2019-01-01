@@ -10,10 +10,10 @@ typedef struct {
 	int length;
 } ArrayListType;
 
-//error
+// error
 void error(char *message)
 {
-	fprintf(stderr, '%s\n', message);
+	fprintf(stderr, "%s\n", message);
 	exit(1);
 }
 
@@ -76,7 +76,7 @@ element delete(ArrayListType *L, int position)
 
 	if (position < 0 || position >= L->length)
 	{
-		//error("error");
+		error("error");
 	}
 	item = L->list[position];
 	for (i = position; i < L->length - 1; i++)
@@ -96,6 +96,7 @@ void main()
 	add(&list1, 0, 10);
 	add(&list1, 0, 20);
 	add(&list1, 0, 30);
+	element item = delete(&list1, -1);
 	display(&list1);
 
 	plist = (ArrayListType *)malloc(sizeof(ArrayListType));
