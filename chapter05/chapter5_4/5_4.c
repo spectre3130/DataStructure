@@ -74,7 +74,7 @@ element peek(LinkedStackType *s)
 
 void main()
 {
-	LinkedStackType *s;
+	LinkedStackType s;
 	init(&s);
 	push(&s, 1);
 	push(&s, 2);
