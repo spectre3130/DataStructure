@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define TRUE 1
-#define FALSE 2
+#define FALSE 0
 
 #define ARRIVAL 1
 #define ORDER 2
@@ -24,7 +24,7 @@ typedef struct {
 	int heap_size;
 } HeapType;
 
-init(HeapType *h)
+void init(HeapType *h)
 {
 	h->heap_size = 0;
 }
